@@ -1,0 +1,308 @@
+/* Additional styles to enhance the Recipe Book */
+
+/* Hero section enhancements */
+.display-4 {
+    font-weight: 700;
+    color: #2c7744;
+}
+
+.lead {
+    font-size: 1.3rem;
+    color: #555;
+}
+
+/* Section titles */
+.section-title {
+    position: relative;
+    color: #2c7744;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e9ecef;
+}
+
+/* Featured recipe card */
+.featured-card {
+    border: 1px solid #e7f3e5;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease, box-shadow 0.5s ease;
+}
+
+.featured-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+/* Category badges */
+.badge.bg-secondary {
+    background-color: #edf7ed !important;
+    color: #2c7744 !important;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 20px;
+    border: 1px solid #d1e7dd;
+}
+
+/* Category filter buttons */
+.btn-outline-success {
+    color: #2c7744;
+    border-color: #2c7744;
+}
+
+.btn-outline-success:hover {
+    background-color: #2c7744;
+    color: white;
+}
+
+/* Pagination styling */
+.pagination .page-link {
+    color: #2c7744;
+    border-color: #eee;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #2c7744;
+    border-color: #2c7744;
+    color: white;
+}
+
+.pagination .page-link:hover {
+    background-color: #edf7ed;
+    color: #2c7744;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #aaa;
+}
+
+/* Alert enhancements */
+.alert {
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.alert-success {
+    background-color: #edf7ed;
+    border-left: 5px solid #2c7744;
+    color: #155724;
+}
+
+.alert-info {
+    background-color: #e3f2fd;
+    border-left: 5px solid #3d7d9a;
+    color: #0c5460;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-left: 5px solid #dc3545;
+    color: #721c24;
+}
+
+/* Button hover effects */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/* Card improvements */
+.card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.12);
+}
+
+.card-img-top {
+    transition: transform 0.5s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+/* Recipe cards layout */
+.card-footer .btn {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .card-footer .btn-sm {
+        padding: 0.25rem 0.4rem;
+        font-size: 0.7rem;
+    }
+}
+
+/* Empty state placeholder */
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+/* Animated transitions */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Authentication pages background and styling */
+
+/* Common auth background styles */
+.auth-background {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+/* Login background image */
+.login-background {
+    background-image: url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+}
+
+/* Register background image */
+.register-background {
+    background-image: url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+}
+
+/* Overlay to make form more readable */
+.auth-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;
+}
+
+/* Authentication card styling */
+.auth-card {
+    border-radius: 15px;
+    overflow: hidden;
+    border: none;
+    animation: cardFadeIn 0.8s ease-in-out;
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Form control styling */
+.auth-card .form-control {
+    padding: 0.8rem 0.75rem;
+    font-size: 1rem;
+}
+
+.auth-card .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(44, 119, 68, 0.25);
+}
+
+.auth-card .input-group-text {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Button styling */
+.auth-card .btn-primary,
+.auth-card .btn-success {
+    padding: 0.8rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.auth-card .btn-primary:hover,
+.auth-card .btn-success:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Password strength bar */
+.password-strength .progress {
+    height: 6px;
+    background-color: #f2f2f2;
+}
+
+/* Checkbox styling */
+.auth-card .form-check-input:checked {
+    background-color: #2c7744;
+    border-color: #2c7744;
+}
+
+/* Form labels */
+.auth-card .form-label {
+    font-weight: 500;
+    color: #444;
+    margin-bottom: 0.5rem;
+}
+
+/* Card header and footer */
+.auth-card .card-header,
+.auth-card .card-footer {
+    background-color: white;
+}
+
+/* Alert styling */
+.auth-card .alert {
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+/* Links styling */
+.auth-card a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.auth-card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .auth-card {
+        margin: 10px;
+    }
+
+    .auth-card .card-body {
+        padding: 1.5rem;
+    }
+}
+
